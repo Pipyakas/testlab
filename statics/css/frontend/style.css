@@ -1,0 +1,86 @@
+*{
+	box-sizing: border-box;	
+}
+.item{
+	margin-right: auto;
+	margin-left: auto;<!-- đặt hai margin-right và margin-left là auto sẽ định vị class item đặt trung tâm của bố cục-->
+}
+
+#menu_logo{
+background-color:#2194D2;
+height:100px;
+color:#ffffff;
+display:flex;
+margin:0px;
+padding:0px;
+
+}
+#menu_logo img{
+	height:100px;
+  margin-left: auto;
+  margin-right:auto;
+}
+#menu_bar{
+	background-color: #0059a9;
+  margin:0px;
+  padding:0px;
+	
+}
+#menu_bar a{
+	color:white; <!-- màu của các nút link trên menu_bar -->
+  padding:0px;
+  margin:0px;
+}
+#menu_bar a AdminMenu{
+  color:black; <!-- màu của các nút link trên menu_bar -->
+}
+body{
+  position: relative;
+  background: #f1f1f1;
+  padding-top: 138px; <!-- đẩy nội dung body xuống dưới menu -->
+}
+.news {
+  margin-top:10px;
+  padding-top:10px;
+  padding-bottom: 10px;
+ 
+  
+}
+.page-login{
+    margin: 50px auto 130px auto;
+  }
+
+.form-wrapper{
+   margin: 0px auto; 
+   float:none;<!-- tạo cân bằng giữa cho form wraper -->
+}
+#menu_bar .navbar-toggle .icon-bar { 
+  background-color:white;
+}
+.multi_select{
+    height: 150px;
+    display: block;
+    position: relative;
+    overflow-y: scroll;
+    border: 1px solid #CDCDCD;
+    margin-left: 16px;
+    padding-left: 35px;
+
+  }
+.portfolio-user img{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin: 0px;
+  padding: 0px;
+}
+.chat-user img{
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  margin: 0px;
+  padding: 0px;
+}
+.chat-message{
+  /*border:1px solid gray;*/
+}

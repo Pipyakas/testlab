@@ -1,0 +1,6 @@
+RewriteEngine on 
+Options All –Indexes
+RewriteCond %{HTTP_REFERER} !^http://(www\.)?elabvn.com [NC] 
+RewriteCond %{HTTP_REFERER} !^http://(www\.)?elabvn.com.*$ [NC] 
+RewriteRule .*\.(gif|jpg)$ - [F]
+Options -Indexes
