@@ -38,8 +38,6 @@
 elab/admin/dashboard
 |
 */
-//$route['default_controller'] = 'welcome';
-
 $route['default_controller'] = 'elab/home';
 $route['trang-chu'] = 'elab/home';
 $route['dang-nhap'] = 'elab/users/login';
@@ -56,9 +54,6 @@ $route['sua-bai-viet'] = 'elab/products/edit_news';
 $route['dang-xuat'] = 'elab/users/logout';
 $route['gioi-thieu'] = 'elab/home/intro';
 $route['web'] = 'elab/home/web';
-$route['android'] = 'elab/home/android';
-$route['bai-viet-app'] = 'elab/users/newsapp';
-$route['friends-list'] = 'elab/friends/load_friends';
 $route['messages'] = 'elab/friends/load_messages';
 $route['chat-room'] = 'elab/friends/chat_room';
 $route['classroom-page'] = 'elab/classrooms/class_page';
@@ -72,14 +67,8 @@ $route['add-question'] = 'elab/classrooms/add_question';
 $route['edit-question'] = 'elab/classrooms/edit_question';
 $route['delete-question'] = 'elab/classrooms/delete_question';
 $route['delete-comment'] = 'elab/comments/delete_comment';
-$route['load-stock'] = 'elab/stocks/load_stocks';
-$route['add-stock'] = 'elab/stocks/add_stock';
-$route['update-stock'] = 'elab/stocks/update_stock';
-$route['delete-stock'] = 'elab/stocks/delete_stock';
-$route['crawl-stock'] = 'elab/crawl/crawl_stock';
 $route['search'] = 'elab/products/search';
 /* app api*/
 $route['update-pos'] = 'app/app_api/insert';
-
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

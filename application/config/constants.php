@@ -74,7 +74,7 @@ define('DEFAULT_LOCATION_FILE', APPPATH.'/settings/default_location.dat');
 define('PAYPAL_FILE', APPPATH.'/settings/paypal.dat');
 
 /*site name*/
-define('SITE_NAME','ELAB');
+define('SITE_NAME','TESTLAB');
 /* End of file constants.php */
 
 define('DEFAULT_PIN','statics/images/pin.png');
