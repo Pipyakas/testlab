@@ -44,7 +44,7 @@ jQuery(document).ready(function() {
 ?>
   <div class="row">
     <div class="container">
-      <a href="<?php echo base_url(); ?>index.php/add-question?id=<?php echo $test_id; ?>&owner_id=<?php echo $owner_id;  ?>" class="btn btn-success" style="float:right; margin-top:5px">Add a question</a>
+      <a href="<?php echo base_url(); ?>index.php/add-question?id=<?php echo $test_id; ?>&owner_id=<?php echo $owner_id;  ?>" class="btn btn-success" style="float:left; margin-top:5px">Add a question</a>
     </div>
   </div>
 <?php
@@ -61,10 +61,10 @@ if (isset($question_id)) {
       <div class="row">
         <div class="container">
           <input type="hidden" name="question[]" value="<?php echo $key->id; ?>">
-          <div class="col-sm-1">
-            <h3>Cau <?php echo $count; ?></h3>
+          <div class="col-sm-2">
+            <h3>Question <?php echo $count; ?>:</h3>
           </div>
-          <div class="col-sm-4">
+          <div class="col-sm-9">
             <h3><?php echo $key->content; ?></h3>
           </div>
           <div class="col-sm-1 edit">
@@ -86,11 +86,8 @@ if (isset($question_id)) {
         <div class="container">
           <div class="col-sm-12 col-xs-12">
             <?php if ($key->avt != null) { ?>
-              <img class="col-sm-12 img-responsive" src="<?php echo base_url();
-                                                          echo $key->avt; ?>">
-
+              <img class="col-sm-12 img-responsive" src="<?php echo base_url(); echo $key->avt; ?>">
             <?php
-
             } ?>
           </div>
 
@@ -99,7 +96,7 @@ if (isset($question_id)) {
       <div class="row">
         <div class="container">
           <div class="col-sm-2">
-            <h3>Đáp án</h3>
+            <h3>Answers:</h3>
           </div>
         </div>
       </div>
@@ -123,8 +120,6 @@ if (isset($question_id)) {
         }
       }
       ?>
-
-
     <?php
     };
     ?>

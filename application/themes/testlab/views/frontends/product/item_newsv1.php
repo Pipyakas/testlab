@@ -18,7 +18,7 @@ if (isset($news) && $news != null) {
                       
                         </a>
                         <div class="info col-sm-5 col-xs-12">
-                            <a href="<?php echo base_url() . 'index.php/bai-viet?id=' . $key->id; ?>">
+                            <a href="<?php echo base_url() . 'index.php/news?id=' . $key->id; ?>">
                                  <h3><?php echo $key->title; ?></h3>
                                  <p class="date">bài viết lúc <?php echo $key->created_at; ?></p>
                                  
@@ -27,13 +27,13 @@ if (isset($news) && $news != null) {
                              <a href="<?php echo base_url() . 'index.php/classroom?id=' . $author[0]->id; ?>">
                                  <p> by <?php echo $author[0]->user_name; ?></p>
                              </a>
-                             <a class="btn" href="<?php echo base_url() . 'index.php/bai-viet?id=' . $key->id; ?>">
+                             <a class="btn" href="<?php echo base_url() . 'index.php/news?id=' . $key->id; ?>">
                                Đọc tiếp
                              </a>
                              <?php
                                 if (isset($_SESSION['user'])) {
                                     if ($_SESSION['user'][0]->id == $key->user_id) { ?>
-                                    <a href="<?php echo base_url() . 'index.php/sua-bai-viet?id=' . $key->id; ?>" class="fa fa-edit"></a>
+                                    <a href="<?php echo base_url() . 'index.php/edit-news?id=' . $key->id; ?>" class="fa fa-edit"></a>
                                     <a href="<?php echo base_url() . 'index.php/xoa?id=' . $key->id; ?>" class="fa fa-trash-o"></a>
                              <?php
                                     };

@@ -1,9 +1,5 @@
 <div id="menu">
   <nav class="navbar navbar-fixed-top">
-    <div id="menu_logo" class="form-wrapper col-sm-12 ">
-      <img class="img-responsive item col-sm-12 col-xs-12" src="<?php echo base_url() . 'statics/images/logo.jpg'; ?>"> <!-- ảnh logo chiếm bề rộng 6 cột-->
-    </div>
-
     <div id="menu_bar" class="row col-sm-12">
       <div class="container">
         <button type="button" class="navbar-toggle pull-left collapsed" data-toggle="collapse" data-target="#navbar">
@@ -27,6 +23,7 @@
           <a href="#" class="dropdown-toggle col-sm-1 col-xs-4" style="float:right" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Admin</a>
           <ul class="dropdown-menu pull-right" aria-labelledby="dropdownMenu1">
             <?php if (isset($_SESSION['user'])) { ?>
+              <li><a href="<?php echo base_url() . 'index.php/post-news' ?>" style="color:black;">Create news post</a></li>
               <li><a href="<?php echo base_url() . 'index.php/update-user' ?>" style="color:black;">Update user profile</a></li>
               <li><a href="<?php echo base_url() . 'index.php/logout' ?>" style="color:black;"><?php echo lang('msg_logout'); ?></a></li>
             <?php } else { ?>

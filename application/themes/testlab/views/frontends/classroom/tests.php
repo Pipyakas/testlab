@@ -1,31 +1,11 @@
- <div class="portfolio-user container" style="margin-top: 15px; float: none;">
-   <div class="core col-md-12">
-     <div class="wrapper chat-user col-md-6">
-       <img src="<?php echo base_url() . $this->classrooms_model->get_by_user_id($owner_id)[0]->avt; ?>" alt="">
-
-     </div>
-     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sub_navbar" style="float:left">
-       <span class="icon-bar"></span>
-       <span class="icon-bar"></span>
-       <span class="icon-bar"></span>
-     </button>
-     <div class="col-md-6 collapse navbar-collapse" aria-expanded="false" id="sub_navbar">
-       <ul class="nav navbar-nav pull-right col-xs-12 ">
-
-         <!-- <li class="active"><a href="<?php echo base_url() ?>index.php/about?id=<?php  ?>">Introduction</a></li> -->
-         <li class="active"><a href="<?php echo base_url() ?>index.php/web-class?id=<?php echo $owner_id;  ?>">Web class</a></li>
-         <li class="active"><a href="<?php echo base_url() ?>index.php/test?id=<?php echo $owner_id;  ?>">Test</a></li>
-       </ul>
-     </div>
-   </div>
- </div>
  <?php
   if ($owner_id == $_SESSION['user'][0]->id) {
   ?>
    <div class="container">
      <div class="row">
        <div class="container">
-         <a class="btn btn-success" style="float:right; margin-top:10px;" href="<?php echo base_url(); ?>index.php/testlab/classrooms/add_test?id=<?php echo $owner_id; ?>">Add Test</a>
+         <a class="btn btn-success" style="float:left; margin-top:10px;" 
+            href="<?php echo base_url(); ?>index.php/testlab/classrooms/add_test?id=<?php echo $owner_id; ?>">Add Test</a>
        </div>
      </div>
      <?php
@@ -33,15 +13,12 @@
     if (isset($test_topic)) {
       foreach ($test_topic as $key) {
         # code...
-
       ?>
        <div class="row ">
          <div class="topic">
            <div class="container">
-
              <div class="img_topic col-sm-2 col-xs-12">
-               <img class="" src="<?php echo base_url();
-                                  echo $key->avt; ?>">
+               <img class="" src="<?php echo base_url(); echo $key->avt; ?>">
              </div>
              <div class="col-sm-6 col-xs-12 info">
                <a href="<?php echo base_url() ?>index.php/test-topic?id=<?php echo $key->id; ?>&owner_id=<?php echo $owner_id; ?>" />
@@ -87,7 +64,6 @@
        margin-left: 0px;
        margin-right: 0px;
        padding: 0px;
-
      }
 
      .img_topic img {
@@ -96,8 +72,6 @@
        display: block;
        padding: 0px;
        margin: 0px;
-
-
      }
    </style>
  <?php

@@ -18,7 +18,7 @@
 
                                 </a>
                                 <div class="info col-sm-5 col-xs-12">
-                                    <a href="<?php echo base_url() . 'index.php/bai-viet?id=' . $key->id; ?>">
+                                    <a href="<?php echo base_url() . 'index.php/news?id=' . $key->id; ?>">
                                         <h3><?php echo $key->title; ?></h3>
                                         <p class="date">bài viết lúc <?php echo $key->created_at; ?>, <span class="glyphicon glyphicon-eye-open"></span>:<?php echo $key->views; ?></p>
 
@@ -27,13 +27,13 @@
                                     <a href="<?php echo base_url() . 'index.php/classroom?id=' . $author[0]->id; ?>" class="btn btn-success" onclick="return check_login();">
                                         by <?php echo $author[0]->user_name; ?>
                                     </a>
-                                    <a href="<?php echo base_url() . 'index.php/bai-viet?id=' . $key->id; ?>" class="btn btn-primary">
+                                    <a href="<?php echo base_url() . 'index.php/news?id=' . $key->id; ?>" class="btn btn-primary">
                                         Đọc tiếp
                                     </a>
                                     <?php
                                     if (isset($_SESSION['user'])) {
                                         if ($_SESSION['user'][0]->id == $key->user_id) { ?>
-                                            <a href="<?php echo base_url() . 'index.php/sua-bai-viet?id=' . $key->id; ?>" class="fa fa-edit"></a>
+                                            <a href="<?php echo base_url() . 'index.php/edit-news?id=' . $key->id; ?>" class="fa fa-edit"></a>
                                             <a href="<?php echo base_url() . 'index.php/xoa?id=' . $key->id; ?>" class="fa fa-trash-o"></a>
                                     <?php
                                         };

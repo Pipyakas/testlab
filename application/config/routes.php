@@ -59,6 +59,12 @@ $route['edit-question'] = 'testlab/classrooms/edit_question';
 $route['delete-question'] = 'testlab/classrooms/delete_question';
 $route['delete-comment'] = 'testlab/comments/delete_comment';
 $route['search'] = 'testlab/products/search';
+$route['post-news'] = 'testlab/users/add_news';
+$route['bang-tin'] = 'testlab/users/load_news';
+$route['trang-tin'] = 'testlab/products/load_news';
+$route['trang-tin/(:any)'] = 'testlab/products/load_news';
+$route['news'] = 'testlab/users/news';
+$route['edit-news'] = 'testlab/products/edit_news';
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
