@@ -41,7 +41,6 @@
   gtag('config', 'UA-122954268-1');
 </script>
    
-	<script type="text/javascript" src="<?php echo base_url().'statics/js/offrightclick.js'?>"></script> 
 	
 	
 	
