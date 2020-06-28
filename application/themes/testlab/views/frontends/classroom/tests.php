@@ -9,8 +9,15 @@
        <span class="icon-bar"></span>
        <span class="icon-bar"></span>
      </button>
+     <div class="col-md-6 collapse navbar-collapse" aria-expanded="false" id="sub_navbar">
+       <ul class="nav navbar-nav pull-right col-xs-12 ">
+
+         <!-- <li class="active"><a href="<?php echo base_url() ?>index.php/gioi-thieu?id=<?php  ?>">Introduction</a></li> -->
+         <li class="active"><a href="<?php echo base_url() ?>index.php/web-class?id=<?php echo $owner_id;  ?>">Web class</a></li>
+         <li class="active"><a href="<?php echo base_url() ?>index.php/test?id=<?php echo $owner_id;  ?>">Test</a></li>
+       </ul>
+     </div>
    </div>
- </div>
  </div>
  <?php
   if ($owner_id == $_SESSION['user'][0]->id) {
@@ -18,7 +25,7 @@
    <div class="container">
      <div class="row">
        <div class="container">
-         <a class="btn btn-success" style="float:right; margin-top:10px;" href="<?php echo base_url(); ?>index.php/elab/classrooms/add_test?id=<?php echo $owner_id; ?>">Add Test</a>
+         <a class="btn btn-success" style="float:right; margin-top:10px;" href="<?php echo base_url(); ?>index.php/testlab/classrooms/add_test?id=<?php echo $owner_id; ?>">Add Test</a>
        </div>
      </div>
      <?php

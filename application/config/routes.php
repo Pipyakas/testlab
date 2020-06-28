@@ -35,40 +35,50 @@
 |
 | This route will tell the Router what URI segments to use if those provided
 | in the URL cannot be matched to a valid route.
-elab/admin/dashboard
+testlab/admin/dashboard
 |
 */
-$route['default_controller'] = 'elab/home';
-$route['trang-chu'] = 'elab/home';
-$route['dang-nhap'] = 'elab/users/login';
-$route['update-user'] = 'elab/users/update';
-$route['dang-ki'] = 'elab/users/register';
-$route['dang-tin'] = 'elab/users/add_news';
-$route['bang-tin'] = 'elab/users/load_news';
-$route['trang-tin'] = 'elab/products/load_news';
-$route['trang-tin/(:any)'] = 'elab/products/load_news';
-$route['don-hang'] = 'elab/users/order';
+
+$route['default_controller'] = 'testlab/home';
+$route['trang-chu'] = 'testlab/home';
+$route['dang-nhap'] = 'testlab/users/login';
+$route['update-user'] = 'testlab/users/update';
+$route['dang-ki'] = 'testlab/users/register';
+$route['dang-tin'] = 'testlab/users/add_news';
+$route['bang-tin'] = 'testlab/users/load_news';
+$route['trang-tin'] = 'testlab/products/load_news';
+$route['trang-tin/(:any)'] = 'testlab/products/load_news';
+$route['don-hang'] = 'testlab/users/order';
 $route['dang-nhap-app'] = 'app/app_api/login';
-$route['bai-viet'] = 'elab/users/news';
-$route['sua-bai-viet'] = 'elab/products/edit_news';
-$route['dang-xuat'] = 'elab/users/logout';
-$route['gioi-thieu'] = 'elab/home/intro';
-$route['web'] = 'elab/home/web';
-$route['messages'] = 'elab/friends/load_messages';
-$route['chat-room'] = 'elab/friends/chat_room';
-$route['classroom-page'] = 'elab/classrooms/class_page';
-$route['add-class'] = 'elab/classrooms/add_class';
-$route['web-class'] = 'elab/classrooms/web_class';
-$route['test'] = 'elab/classrooms/test';
-$route['test-topic'] = 'elab/classrooms/test_topic';
-$route['xoa-test'] = 'elab/classrooms/delete_test';
-$route['edit-test'] = 'elab/classrooms/edit_test';
-$route['add-question'] = 'elab/classrooms/add_question';
-$route['edit-question'] = 'elab/classrooms/edit_question';
-$route['delete-question'] = 'elab/classrooms/delete_question';
-$route['delete-comment'] = 'elab/comments/delete_comment';
-$route['search'] = 'elab/products/search';
+$route['bai-viet'] = 'testlab/users/news';
+$route['sua-bai-viet'] = 'testlab/products/edit_news';
+$route['dang-xuat'] = 'testlab/users/logout';
+$route['gioi-thieu'] = 'testlab/home/intro';
+$route['web'] = 'testlab/home/web';
+$route['android'] = 'testlab/home/android';
+$route['bai-viet-app'] = 'testlab/users/newsapp';
+$route['friends-list'] = 'testlab/friends/load_friends';
+$route['messages'] = 'testlab/friends/load_messages';
+$route['chat-room'] = 'testlab/friends/chat_room';
+$route['classroom-page'] = 'testlab/classrooms/class_page';
+$route['add-class'] = 'testlab/classrooms/add_class';
+$route['web-class'] = 'testlab/classrooms/web_class';
+$route['test'] = 'testlab/classrooms/test';
+$route['test-topic'] = 'testlab/classrooms/test_topic';
+$route['xoa-test'] = 'testlab/classrooms/delete_test';
+$route['edit-test'] = 'testlab/classrooms/edit_test';
+$route['add-question'] = 'testlab/classrooms/add_question';
+$route['edit-question'] = 'testlab/classrooms/edit_question';
+$route['delete-question'] = 'testlab/classrooms/delete_question';
+$route['delete-comment'] = 'testlab/comments/delete_comment';
+$route['load-stock'] = 'testlab/stocks/load_stocks';
+$route['add-stock'] = 'testlab/stocks/add_stock';
+$route['update-stock'] = 'testlab/stocks/update_stock';
+$route['delete-stock'] = 'testlab/stocks/delete_stock';
+$route['crawl-stock'] = 'testlab/crawl/crawl_stock';
+$route['search'] = 'testlab/products/search';
 /* app api*/
 $route['update-pos'] = 'app/app_api/insert';
+
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

@@ -17,7 +17,7 @@
         //    tinyMCE.triggerSave();// sua loi submit hai lan
         pass_data = $('#form').serialize();
         $.ajax({
-            url: '<?php echo base_url() ?>index.php/elab/comments/edit_apply',
+            url: '<?php echo base_url() ?>index.php/testlab/comments/edit_apply',
             type: 'post',
 
 
@@ -90,12 +90,21 @@
   <div class="core col-md-12">
     <div class="wrapper chat-user col-md-6">
       <img src="<?php echo base_url() . $this->classrooms_model->get_by_user_id($owner_id)[0]->avt; ?>" alt="">
+
     </div>
     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sub_navbar" style="float:left">
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
+    <div class="col-md-6 collapse navbar-collapse" aria-expanded="false" id="sub_navbar">
+      <ul class="nav navbar-nav pull-right col-xs-12 ">
+
+        <!-- <li class="active"><a href="<?php echo base_url() ?>index.php/gioi-thieu?id=<?php  ?>">Introduction</a></li> -->
+        <li class="active"><a href="<?php echo base_url() ?>index.php/web-class?id=<?php echo $owner_id;  ?>">Web class</a></li>
+        <li class="active"><a href="<?php echo base_url() ?>index.php/test?id=<?php echo $owner_id;  ?>">Test</a></li>
+      </ul>
+    </div>
   </div>
 </div>
 
@@ -133,14 +142,19 @@
                                                     } else {
                                                       echo '""';
                                                     } ?>" />
+
             <div id="webRTC" class="col-sm-12" style="margin:0px;padding-left:10px;">
               <div class="flex-chat">
+
                 <ul id="comment"></ul>
                 <div id="comment_input">
                   <input id="m" name="m" onkeypress="return check_key(event);" value="<?php echo '""'; ?>" />
+
                   <button id="comment_button" class="btn btn-success" type="submit">Send</button>
                 </div>
+
               </div>
+
             </div>
           </form>
           <!--     </div>
@@ -152,10 +166,14 @@
             <div class="form-wraper" style="text-align: center">
               <h1>Lessons</h1>
             </div>
+
           </div>
           <div class="inner-content">
+
           </div>
         </div>
+
+
       </div>
     </div>
   </div>
@@ -169,6 +187,7 @@
     height: 200px;
     overflow: auto;
     border: 1px solid #BDBDBD;
+
   }
 
   #comment_input {
@@ -176,6 +195,7 @@
     padding: 0px;
     margin: 0px;
     height: 20px;
+
   }
 
   #comment_input input {
@@ -185,6 +205,8 @@
     padding: 0px;
     overflow: auto;
     margin: 0px;
+
+
   }
 
   #comment_input button {
@@ -193,7 +215,10 @@
     border: 1px solid gray;
     padding: 0px;
     margin: 0px;
+
   }
+
+
 
   #messages {
     background: #ddd;
@@ -203,6 +228,7 @@
     height: 200px;
     overflow: auto;
     border: 1px solid #BDBDBD;
+
   }
 
   #comment li {
@@ -267,13 +293,24 @@
     }
   }
 
+
+
+
+
   // Send random messge data on every button click
   bindEvent(comment_button, 'click', function(e) {
+
     var random = $('#m').val();
+
+
     $('#comment').append('<div class="row col-sm-12"><div class="chat-user col-sm-1 col-xs-1"><img src="<?php if ($_SESSION['user'][0]->avt != null) {
                                                                                                           echo base_url() . $_SESSION['user'][0]->avt;
-                                                                                                        } ?>"/></div><div class="chat-message col-sm-10 col-xs-10">' + random + '</div></div>');
+                                                                                                        }
+                                                                                                        ?>"/></div><div class="chat-message col-sm-10 col-xs-10">' + random + '</div></div>');
     $("#comment").scrollTop($("#comment")[0].scrollHeight);
+
+
+
   });
 </script>
 
@@ -286,7 +323,8 @@
     function load_products(more) {
       $.ajax({
         method: 'GET',
-        url: '<?php echo base_url() ?>index.php/elab/products/load_news_by_user_id',
+        url: '<?php echo base_url() ?>index.php/testlab/products/load_news_by_user_id',
+
         data: {
           //first:first,
           user_id: <?php if (isset($owner_id)) {
@@ -318,7 +356,7 @@
     function load_comments(more) {
       $.ajax({
         method: 'GET',
-        url: '<?php echo base_url() ?>index.php/elab/comments/load_comments_by_user_id',
+        url: '<?php echo base_url() ?>index.php/testlab/comments/load_comments_by_user_id',
 
         data: {
           //first:first,
@@ -367,6 +405,8 @@
       load_comments(false);
       $("#comment").scrollTop($("#comment")[0].scrollHeight);
       document.getElementById("m").focus();
+
+
     });
 
     $('.btn-categories').click(function() {

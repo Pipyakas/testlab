@@ -6,3 +6,4 @@ class Backend_Controller extends MY_Controller{
 		parent::authentication_backend();
 	}	
 }
+?>

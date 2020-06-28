@@ -22,7 +22,7 @@ jQuery(document).ready(function($) {
     // tinyMCE.triggerSave();// sua loi submit hai lan
       pass_data=$('#form').serialize();
       $.ajax({
-        url: '<?php echo base_url() ?>index.php/elab/friends/edit_apply',
+        url: '<?php echo base_url() ?>index.php/testlab/friends/edit_apply',
         type: 'post',
         data: pass_data
         
@@ -61,7 +61,7 @@ jQuery(document).ready(function($) {
        
        <div id="livecode" class="container">
          
-        <form class="form-horizontal col-sm-8" id="form" name="form" method="post" action="<?php echo base_url();?>index.php/elab/friends/edit_apply" enctype="multipart/form-data">
+        <form class="form-horizontal col-sm-8" id="form" name="form" method="post" action="<?php echo base_url();?>index.php/testlab/friends/edit_apply" enctype="multipart/form-data">
         <p><h1>Live demo code</h1></p>
         <input type="hidden" name="id" id="id" value="<?php echo $object->id; ?>"/>
         <fieldset>

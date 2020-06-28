@@ -12,8 +12,8 @@ class MY_Controller extends CI_Controller
 	function __construct()
 	{
 		parent::__construct();
-	/*$this->template->set_partial('header','frontends/commons/header');
-	$this->template->set_partial('footer','frontends/commons/footer');*/
+/*$this->template->set_partial('header','frontends/commons/header');
+$this->template->set_partial('footer','frontends/commons/footer');*/
 
 		date_default_timezone_set('Asia/Bangkok');
 		$this->load->helper('language');
@@ -37,7 +37,7 @@ class MY_Controller extends CI_Controller
 		$data['title']=$this->bk_title;
 		$this->utils->_render_backend($content,$data);
 	}
-	/*thừa kế từ hàm render trong libraries/utils*/
+/*thừa kế từ hàm render trong libraries/utils*/
 	function render_frontend_tp($content, $data = null,$slider=false )
 	{
 		$data['general_setting']=getSettings(GENERAL_SETTING_FILE);
@@ -79,6 +79,7 @@ class MY_Controller extends CI_Controller
 			redirect($_SESSION['redirect']);
 		}
 	}
+
 
 	function pagination_config($base_url,$total_rows,$per_page=10,$uri_segment=3){
 		$config['total_rows'] = $total_rows;
@@ -128,3 +129,4 @@ class MY_Controller extends CI_Controller
 /* End of file MY_Controller.php */
 
 /* Location: ./application/core/MY_Controller.php */
+?>

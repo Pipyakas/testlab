@@ -1,4 +1,4 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed');
+<?php defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 |--------------------------------------------------------------------------
@@ -85,5 +85,5 @@ $config['theme'] = 'testlab';
 */
 
 $config['theme_locations'] = array(
-	APPPATH.'themes/'
+	APPPATH . 'themes/'
 );

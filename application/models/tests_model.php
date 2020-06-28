@@ -18,13 +18,11 @@ class Tests_model extends CI_Model{
 		$array_where = array('id' => $id);
 		return $this -> remove($array_where);
 	}
-
 	function update($data_array, $array_where) {
 		$data_array['updated_at']=date('Y-m-d H:i:s');
 		$this -> db -> where($array_where);
 		return $this -> db -> update('tests', $data_array);
 	}
-
 	function get_by_id($id) {
 		$select = '*';
 		$array_where = array('tests.id' => $id);
@@ -32,16 +30,16 @@ class Tests_model extends CI_Model{
 		$order_by = array();
 		return $this -> get($select, $array_where, $array_like, 0, 1, $order_by);
 	}
-
 	function get_by_types_id($types_id){
 	    $select = '*';
 		$like = array();
 		//$where = array('types_id'=>$types_id);
 		$where['FIND_IN_SET('.$types_id.',types_id)<>']=0;
 		$order_by = array();
-		return $this -> get($select, $where, $like, $order_by);			
+		return $this -> get($select, $where, $like, $order_by);	
+  
+		
 	}
-
 	function get_by_owner_id($id) {
 		$select = '*';
 		$array_where =array('owner_id' => $id);// array('classrooms.user_id' => $id);
@@ -49,7 +47,6 @@ class Tests_model extends CI_Model{
 		$order_by = array();
 		return $this -> get($select, $array_where, $array_like, $order_by);
 	}
-	
 	function get($select = "*", $array_where = false, $array_like = false, $first = false, $offset = false, $order_by = false) {
 		$data = array();
 		if( $order_by != false){
@@ -59,6 +56,7 @@ class Tests_model extends CI_Model{
 				$this -> db -> order_by($order, $sort);
 			}
 		}
+
 		$this -> db -> select($select);
 		$this -> db -> from('tests');
 		if($array_where != false)
@@ -68,6 +66,7 @@ class Tests_model extends CI_Model{
 		if($offset != false){
 			$this -> db -> limit($offset, $first);
 		}
+
 		$query = $this -> db -> get();
 		if ($query -> num_rows() > 0) {
 			foreach ($query->result() as $rows) {
@@ -79,10 +78,10 @@ class Tests_model extends CI_Model{
 			return null;
 		}
 	}
-
 	function total($like,$where){
 		$select='*';
 		$order_by=array();
 		return $this->get($select, $where, $like, $order_by);
 	}
 }
+?>

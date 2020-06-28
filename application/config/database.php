@@ -1,4 +1,4 @@
-<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /*
 | -------------------------------------------------------------------
 | DATABASE CONNECTIVITY SETTINGS
@@ -37,7 +37,7 @@
 // The following values will probably need to be changed.
 $db['default']['username'] = "root";
 $db['default']['password'] = "toor";
-$db['default']['database'] = "elab";
+$db['default']['database'] = "testlab";
 
 // The following values can probably stay the same.
 $db['default']['hostname'] = "localhost";

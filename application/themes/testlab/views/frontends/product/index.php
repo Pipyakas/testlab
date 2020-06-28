@@ -3,7 +3,7 @@
 		<!--col-md-5 là độ rộng form login-->
 		<div class="item">
 			<h3> <?php echo lang('msg_login') ?></h3>
-			<!--file msg_lang.php tại thư mục \XAMPP\htdocs\elab\application\language\vietnamese-->
+			<!--file msg_lang.php tại thư mục \XAMPP\htdocs\testlab\application\language\vietnamese-->
 		</div>
 		<form class="form-login" method="post" action="<?php echo base_url() ?>index.php/dang-nhap">
 			<!-- gọi phương thức định tuyến trong routes.php -->

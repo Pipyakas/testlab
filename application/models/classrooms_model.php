@@ -27,7 +27,9 @@ class classrooms_model extends CI_Model{
 		$where['FIND_IN_SET('.$types_id.',types_id)<>']=0;
 		$order_by = array();
 		return $this -> get($select, $where, $like, $order_by);	
-  		}
+  
+		
+	}
 	
 	function get($select = "*", $array_where = false, $array_like = false, $first = false, $offset = false, $order_by = false) {
 		$data = array();
@@ -66,3 +68,4 @@ class classrooms_model extends CI_Model{
 		return $this->get($select, $where, $like, $order_by);
 	}
 }
+?>

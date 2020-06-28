@@ -68,7 +68,7 @@
        
       									 <div id="livecode">
          
-       										 <form class="form-horizontal col-sm-12" id="form" name="form" method="post" action="<?php echo base_url();?>index.php/elab/friends/edit_apply" target="result_frame" enctype="multipart/form-data">
+       										 <form class="form-horizontal col-sm-12" id="form" name="form" method="post" action="<?php echo base_url();?>index.php/testlab/friends/edit_apply" target="result_frame" enctype="multipart/form-data">
        											 
        											 <input type="hidden" name="id" id="id" value="<?php echo $object->id; ?>"/>
        											 <fieldset>
@@ -246,7 +246,7 @@
         //     iframeEl.contentWindow.postMessage(msg, '*');
             
         // };
-        // //sendMessage('elabroom'+<?php echo $_SESSION['user'][0]->id; ?>);
+        // //sendMessage('testlabroom'+<?php echo $_SESSION['user'][0]->id; ?>);
 
         // // Send random messge data on every button click
         // bindEvent(messageButton, 'click', function (e) {

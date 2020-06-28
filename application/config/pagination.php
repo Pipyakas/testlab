@@ -50,3 +50,5 @@ $config['use_page_numbers'] = TRUE;
 // --------------------------------------------------------------------------
 /* End of file pagination.php */
 /* Location: ./bookymark/application/config/pagination.php */
+
+
