@@ -5,7 +5,7 @@
 			<h3> <?php echo lang('msg_login') ?></h3>
 			<!--file msg_lang.php tại thư mục \XAMPP\htdocs\testlab\application\language\vietnamese-->
 		</div>
-		<form class="form-login" method="post" action="<?php echo base_url() ?>index.php/dang-nhap">
+		<form class="form-login" method="post" action="<?php echo base_url() ?>index.php/login">
 			<!-- gọi phương thức định tuyến trong routes.php -->
 			<div class="form-group">
 				<label><?php echo lang('msg_user_name'); ?></label>

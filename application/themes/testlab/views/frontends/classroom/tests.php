@@ -12,7 +12,7 @@
      <div class="col-md-6 collapse navbar-collapse" aria-expanded="false" id="sub_navbar">
        <ul class="nav navbar-nav pull-right col-xs-12 ">
 
-         <!-- <li class="active"><a href="<?php echo base_url() ?>index.php/gioi-thieu?id=<?php  ?>">Introduction</a></li> -->
+         <!-- <li class="active"><a href="<?php echo base_url() ?>index.php/about?id=<?php  ?>">Introduction</a></li> -->
          <li class="active"><a href="<?php echo base_url() ?>index.php/web-class?id=<?php echo $owner_id;  ?>">Web class</a></li>
          <li class="active"><a href="<?php echo base_url() ?>index.php/test?id=<?php echo $owner_id;  ?>">Test</a></li>
        </ul>
@@ -53,7 +53,7 @@
                   if (isset($_SESSION['user'])) {
                     if ($_SESSION['user'][0]->id == $owner_id) { ?>
                      <a href="<?php echo base_url() . 'index.php/edit-test?id=' . $key->id; ?>" class="fa fa-edit"></a>
-                     <a href="<?php echo base_url() . 'index.php/xoa-test?id=' . $key->id; ?>" class="fa fa-trash-o"></a>
+                     <a href="<?php echo base_url() . 'index.php/delete-test?id=' . $key->id; ?>" class="fa fa-trash-o"></a>
                  <?php
                     };
                   };

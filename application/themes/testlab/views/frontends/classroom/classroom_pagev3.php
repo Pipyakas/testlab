@@ -38,7 +38,7 @@
 		<div class="col-md-6">
 			<ul class="pull-right col-xs-12 ">
 
-				<li class="col-xs-4"><a href="<?php echo base_url() ?>index.php/gioi-thieu?id=<?php  ?>">Introduction</a></li>
+				<li class="col-xs-4"><a href="<?php echo base_url() ?>index.php/about?id=<?php  ?>">Introduction</a></li>
 				<li class="col-xs-4"><a href="<?php echo base_url() ?>index.php/web-class?id=<?php echo $owner_id;  ?>">Web class</a></li>
 				<li class="col-xs-4"><a href="<?php echo base_url() ?>index.php/question-answer?id=<?php echo $owner_id;  ?>">Q & A</a></li>
 			</ul>
