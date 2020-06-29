@@ -4,7 +4,7 @@
         <div class="post">
             <img src="<?php echo base_url().$object->avt; ?>" alt="">
             <h3><?php echo $object->title; ?></h3>
-            <p class="date">bài viết lúc <?php echo $object->created_at; ?></p>
+            <p class="date">at <?php echo $object->created_at; ?></p>
             <p class="description"><?php echo $object->content; ?></p>
            <!--  <div id="quantity" name="quantity"> <?php echo $object->quantity; ?></div>
             <input id="product_id" name="product_id" value="<?php echo $object->id; ?>" style="visibility: hidden"> 

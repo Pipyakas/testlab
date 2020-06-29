@@ -129,4 +129,3 @@ $this->template->set_partial('footer','frontends/commons/footer');*/
 /* End of file MY_Controller.php */
 
 /* Location: ./application/core/MY_Controller.php */
-?>

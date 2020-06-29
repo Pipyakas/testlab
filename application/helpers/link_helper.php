@@ -18,4 +18,3 @@ if (!function_exists('get_new_link')) {
 		return $new_word;
 	}
 }
-?>

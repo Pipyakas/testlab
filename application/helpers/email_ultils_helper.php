@@ -67,4 +67,3 @@ function reply_contact($subject,$content,$receive_email){
 	->message($body)
 	->send();
 }
-?>

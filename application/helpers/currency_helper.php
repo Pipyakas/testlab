@@ -26,4 +26,3 @@ function format_vnd($number){
 		echo str_replace('.', ',', ($number/1000000000)).' tỷ';
 	}
 }
-?>

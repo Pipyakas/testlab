@@ -10,7 +10,7 @@ class Users extends MY_Controller
 
   function logout()
   {
-    if (isset($_SESSION['user'])) {  
+    if (isset($_SESSION['user'])) {
       unset($_SESSION['user']);
       //redirect(base_url());
       $this->render_frontend_tp('/frontends/product/index', null);
@@ -61,7 +61,7 @@ class Users extends MY_Controller
 
   function register()
   {
-    if ((isset($_POST['user_name'])) && (isset($_POST['pwd'])) && (isset($_POST['pwd2']))) {
+    if ((isset($_POST['user_name'])) && (isset($_POST['pwd']))) {
       $this->form_validation->set_rules('user_name', $this->lang->line('msg_user_name'), 'trim|required|xss_clean');
       $this->form_validation->set_rules('pwd', $this->lang->line('msg_pwd'), 'trim|required|xss_clean');
       if ($this->form_validation->run() != false) {
@@ -115,7 +115,7 @@ class Users extends MY_Controller
 
   function login()
   {
-    if (isset($_SESSION['user'])) { 
+    if (isset($_SESSION['user'])) {
       redirect(base_url());
     } else {
 
@@ -155,9 +155,9 @@ class Users extends MY_Controller
 
   function add_news()
   {
-    if (isset($_SESSION['user'])) {  
+    if (isset($_SESSION['user'])) {
       $user = $_SESSION['user'][0];
-      if (isset($_POST['title'])) { 
+      if (isset($_POST['title'])) {
         /* ?>
            	   <script>
                  alert("1 + 2");
@@ -218,14 +218,13 @@ class Users extends MY_Controller
       }
       $this->render_frontend_tp('/frontends/users/add_news');
       //$this->render_frontend_tp('/frontends/products/news');
-    } else { 
+    } else {
       redirect(base_url());
     }
   }
 
   function news()
   {
-
     $this->load->model('news_model');
     $id = $this->input->get('id');
 
@@ -250,20 +249,6 @@ class Users extends MY_Controller
     }
   }
 
-  function order()
-  {
-    $this->load->model('order_model');
-    if (isset($_POST['order_quantity'])) {
-      $data['quantity'] = $_POST['order_quantity'];
-      $data['ipaddress'] = $_SERVER['REMOTE_ADDR'];
-      $data['product_id'] = $_POST['product_id'];
-      $this->order_model->insert($data);
-      $data['order'] = $this->order_model->get_by_ip($_SERVER['REMOTE_ADDR']);
-      //print_r($data['order']);
-      $this->render_frontend_tp('frontends/product/order', $data);
-    }
-  }
-  
   function newsapp()
   {
     $this->load->model('news_model');

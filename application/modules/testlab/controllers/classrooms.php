@@ -444,7 +444,7 @@ class classrooms extends MY_Controller
 			$id = $_POST['id'];
 			$title = $_POST['title'];
 			$content = $_POST['content_main'];
-			?>
+?>
 			<script>
 				alert("Hung".<?php echo $content; ?>);
 			</script>

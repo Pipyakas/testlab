@@ -291,5 +291,3 @@ $lang['msg_other_products']='Other Products';
 $lang['msg_logo']='Logo';
 $lang['msg_favicon']='Favicon';
 $lang['drag_drop_image']='Kéo thả ảnh hoặc click vào đây để upload';
-?>
-

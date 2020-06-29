@@ -158,4 +158,3 @@ class Comments extends MY_Controller{
 		}
 	}
 }
-?>

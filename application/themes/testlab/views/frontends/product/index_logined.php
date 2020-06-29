@@ -4,6 +4,7 @@
 <script type="text/javascript">
 	$(document).ready(function() {
 		is_loading: true;
+
 		function load_data_news(more) {
 			$.ajax({
 				method: 'GET',

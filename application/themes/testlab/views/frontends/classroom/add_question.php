@@ -86,7 +86,7 @@ jQuery(document).ready(function() {
       <div class="container">
         <div class="form-group">
           <div class="col-sm-1 control-label">
-            <label>Đáp án</label>
+            <label>Answers</label>
           </div>
         </div>
       </div>
@@ -98,7 +98,6 @@ jQuery(document).ready(function() {
       <div class="row">
         <div class="container">
           <div class="form-group">
-
             <div class="col-sm-1 control-label">
               <input type="Checkbox" name="selection[]" value="<?php echo $i; ?>">
             </div>
@@ -109,7 +108,7 @@ jQuery(document).ready(function() {
               <input class="form-control" name="option[]" value="">
             </div>
             <div class="col-sm-1 control-label">
-              <label>Recommend</label>
+              <label>Result</label>
             </div>
             <div class="col-sm-3">
               <input class="form-control" name="recommend[]" value="">
@@ -120,9 +119,6 @@ jQuery(document).ready(function() {
     <?php
     }
     ?>
-
-
-
 
     <div class="row">
       <div class="container">

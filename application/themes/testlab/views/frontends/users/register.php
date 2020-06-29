@@ -23,12 +23,6 @@
             </div>
             <div class="form-group">
                 <!-- password -->
-                <label><?php echo lang('msg_pwd'); ?></label>
-                <input name="pwd2" id="pwd2" type="password" class="form-control" placeholder="Password">
-                <?php echo form_error('pwd') ?>
-            </div>
-            <div class="form-group">
-                <!-- password -->
                 <label><?php echo lang('msg_email'); ?></label>
                 <input name="email" id="email" type="email" class="form-control" placeholder="Email">
 

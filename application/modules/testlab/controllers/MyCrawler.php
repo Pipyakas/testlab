@@ -142,5 +142,4 @@ Class MyCrawler extends  PHPCrawler
   }
   
 
-}  
-?>
+}

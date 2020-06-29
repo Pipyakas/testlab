@@ -12,4 +12,3 @@
   // 		$ci->lang->load('msg',$ci->config->item('language'));
   // 	}
   // }
-  ?>

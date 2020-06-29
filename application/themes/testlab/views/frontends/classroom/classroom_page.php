@@ -11,7 +11,6 @@
 <script>
   jQuery(document).ready(function($) {
     $('#form').validate({
-
       submitHandler: function() {
         // alert("submited!!!");
         //    tinyMCE.triggerSave();// sua loi submit hai lan
@@ -19,11 +18,8 @@
         $.ajax({
             url: '<?php echo base_url() ?>index.php/testlab/comments/edit_apply',
             type: 'post',
-
-
             //  dataType: 'json',
             data: pass_data
-
           })
           .done(function() {
             // alert("sent!!!");
@@ -41,20 +37,17 @@
                 message: '<?php echo lang('edit_successfully') ?>'
               });
             }
-
             if (data.ok == 0) {
               alert("ok=0!!!");
               //need login to cotinue;
               window.location.href = "<?php echo base_url() . 'admin/dashboard/login'; ?>"
             }
           })
-
       }
     });
-
-
   });
 </script>
+
 <style>
   .hide-button .like {
     color: #212121;
@@ -86,37 +79,12 @@
   }
 </style>
 
-<div class="portfolio-user container" style="margin-top: 15px; float: none;">
-  <div class="core col-md-12">
-    <div class="wrapper chat-user col-md-6">
-      <img src="<?php echo base_url() . $this->classrooms_model->get_by_user_id($owner_id)[0]->avt; ?>" alt="">
-
-    </div>
-    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sub_navbar" style="float:left">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <div class="col-md-6 collapse navbar-collapse" aria-expanded="false" id="sub_navbar">
-      <ul class="nav navbar-nav pull-right col-xs-12 ">
-
-        <!-- <li class="active"><a href="<?php echo base_url() ?>index.php/about?id=<?php  ?>">Introduction</a></li> -->
-        <li class="active"><a href="<?php echo base_url() ?>index.php/web-class?id=<?php echo $owner_id;  ?>">Web class</a></li>
-        <li class="active"><a href="<?php echo base_url() ?>index.php/test?id=<?php echo $owner_id;  ?>">Test</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-
 <div id="content" class="store-page">
   <!-- <div class="container"  style="margin:0px;padding:5px;"> -->
   <div class="container">
-
     <!-- <div class="core col-md-12"> -->
     <div class="col-md-12 col-xs-12" style="margin:0px;padding:0px;">
       <div class="row">
-
         <div class="col-sm-6 col-xs-12" style="padding:0px;">
           <!--  <div class="form-group">-->
           <div>
@@ -142,19 +110,14 @@
                                                     } else {
                                                       echo '""';
                                                     } ?>" />
-
             <div id="webRTC" class="col-sm-12" style="margin:0px;padding-left:10px;">
               <div class="flex-chat">
-
                 <ul id="comment"></ul>
                 <div id="comment_input">
                   <input id="m" name="m" onkeypress="return check_key(event);" value="<?php echo '""'; ?>" />
-
                   <button id="comment_button" class="btn btn-success" type="submit">Send</button>
                 </div>
-
               </div>
-
             </div>
           </form>
           <!--     </div>
@@ -166,18 +129,15 @@
             <div class="form-wraper" style="text-align: center">
               <h1>Lessons</h1>
             </div>
-
           </div>
           <div class="inner-content">
-
           </div>
         </div>
-
-
       </div>
     </div>
   </div>
 </div>
+
 <style>
   #comment {
     background: #ddd;

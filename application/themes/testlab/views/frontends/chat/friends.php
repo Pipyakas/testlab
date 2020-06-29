@@ -26,7 +26,6 @@ require get_theme_folder() . 'custom_validation.php';
             type: 'post',
             //  dataType: 'json',
             data: pass_data
-
           })
           .done(function() {
             alert("sent!!!");
@@ -50,7 +49,6 @@ require get_theme_folder() . 'custom_validation.php';
               window.location.href = "<?php echo base_url() . 'admin/dashboard/login'; ?>"
             }
           })
-
       }
     });
   });
@@ -68,7 +66,6 @@ if (isset($friends) && $friends != null) {
                                                   echo base_url() . $this->users_model->get_by_username($key->friends_name)[0]->avt;
                                                 }
                                                 ?>" alt="">
-
             </a>
             <div class="info col-sm-7">
               <a href="<?php echo base_url() . 'index.php/messages?id=' . $key->id; ?>">
@@ -76,11 +73,11 @@ if (isset($friends) && $friends != null) {
                 </h3>
               </a>
             </div>
-
           </div>
         </div>
       </div>
     </div>
+
     <style type="text/css">
       #newslist .thumb {
         height: 100px;
@@ -121,18 +118,14 @@ if (isset($friends) && $friends != null) {
 
 if (isset($livecodes) && $livecodes != null) {
   foreach ($livecodes as $object) {
-
   ?>
-
     <div id="livecode" class="container">
-
       <form class="form-horizontal" id="form" name="form" method="post" enctype="multipart/form-data">
         <p>
           <h1>Live demo code</h1>
         </p>
         <input type="hidden" name="id" id="id" value="<?php echo $object->id; ?>" />
         <fieldset>
-
           <div class="form-group">
             <div class="col-sm-2">
               <label class="control-label">Input Codes</label>
@@ -146,12 +139,9 @@ if (isset($livecodes) && $livecodes != null) {
               <label class="control-label">Result</label>
             </div>
             <div class="col-sm-8 ">
-
               <?php echo $object->codes; ?>
             </div>
           </div>
-
-
           <div class="form-group">
             <div class="col-sm-2 col-xs-offset-2">
               <button type="submit" class="btn btn-success"><?php echo lang('msg_edit'); ?></button>

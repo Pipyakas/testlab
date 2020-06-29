@@ -141,4 +141,3 @@ function resetPaypal(){
 	$settings['is_test']='true';
 	resetSettings($settings,PAYPAL_FILE);	
 }
-?>

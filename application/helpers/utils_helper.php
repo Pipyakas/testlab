@@ -186,4 +186,3 @@ function object_2_array($d) {
     	$new_word = str_replace(' ', '-', strtolower($word));
     	return $new_word;
     };
-    ?>

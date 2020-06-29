@@ -95,12 +95,12 @@ class Products extends MY_Controller
 			$id = $_POST['id'];
 			$title = $_POST['title'];
 			$content = $_POST['content_main'];
-			?>
+?>
 			<script>
 				alert("Edit".<?php echo $content; ?>);
 			</script>
 
-			<?php
+<?php
 			$data_array = array(
 				'title' => $title,
 				'content' => $content
@@ -157,7 +157,7 @@ class Products extends MY_Controller
 			echo json_encode(array('ok' => 0));
 		}
 	}
-	
+
 	function upload_products()
 	{
 		if (!isset($_SESSION['user'])) {

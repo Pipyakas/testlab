@@ -90,7 +90,7 @@ if ($question != null) {
         <div class="container">
           <div class="form-group">
             <div class="col-sm-1 control-label">
-              <label>Đáp án</label>
+              <label>Answers</label>
             </div>
           </div>
         </div>

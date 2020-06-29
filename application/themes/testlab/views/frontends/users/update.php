@@ -19,8 +19,6 @@ if (isset($user)) {
                 <div class="form-group">
                     <label>Password</label>
                     <input class="form-control" type="password" name="pwd">
-                    <label>Re-type Password</label>
-                    <input class="form-control" type="password" name="pwd2">
                 </div>
                 <button class="btn btn-success " type="submit">Update</button>
             </form>

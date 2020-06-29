@@ -15,20 +15,17 @@
                                     <img class="img-responsive" src="<?php if ($key->avt != null) {
                                                                             echo base_url() . $key->avt;
                                                                         } ?>" alt="">
-
                                 </a>
                                 <div class="info col-sm-5 col-xs-12">
                                     <a href="<?php echo base_url() . 'index.php/news?id=' . $key->id; ?>">
                                         <h3><?php echo $key->title; ?></h3>
-                                        <p class="date">bài viết lúc <?php echo $key->created_at; ?>, <span class="glyphicon glyphicon-eye-open"></span>:<?php echo $key->views; ?></p>
-
-
+                                        <p class="date">at <?php echo $key->created_at; ?>, <span class="glyphicon glyphicon-eye-open"></span>:<?php echo $key->views; ?></p>
                                     </a>
                                     <a href="<?php echo base_url() . 'index.php/classroom?id=' . $author[0]->id; ?>" class="btn btn-success" onclick="return check_login();">
-                                        by <?php echo $author[0]->user_name; ?>
+                                        By <?php echo $author[0]->user_name; ?>
                                     </a>
                                     <a href="<?php echo base_url() . 'index.php/news?id=' . $key->id; ?>" class="btn btn-primary">
-                                        Đọc tiếp
+                                        See more
                                     </a>
                                     <?php
                                     if (isset($_SESSION['user'])) {
@@ -62,6 +59,7 @@
                     width: 100%;
                 }
             </style>
+
             <script type="text/javascript">
                 function check_login() {
 
@@ -96,8 +94,5 @@
         </div>
     <?php
     }
-
-
-
     ?>
 </div>

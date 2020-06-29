@@ -137,5 +137,4 @@ class Friends extends MY_Controller{
     $this->utils->_load_view('frontends/product/detailed_news',$data);
   }
 
-} 
-?>
+}
