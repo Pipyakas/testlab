@@ -10,7 +10,6 @@
         <div class="collapse navbar-collapse col-sm-6 col-xs-6" aria-expanded="false" id="navbar">
           <ul class="nav navbar-nav">
             <li class="active"><a class="navbar-brand" href="<?php echo base_url() ?>index.php/homepage">Home</a></li>
-            <li class="active"><a class="navbar-brand" href="<?php echo base_url() ?>index.php/about">About</a></li>
             <?php if (isset($_SESSION['user'])) { ?>
               <li class="active"><a class="navbar-brand" href="<?php echo base_url() ?>index.php/test?id=<?php echo $_SESSION['user'][0]->id ?>">Test</a></li>
             <?php } ?>
