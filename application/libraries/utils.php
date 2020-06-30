@@ -108,4 +108,3 @@ class utils {
 	}
 	/* End of file phpthumb_lib.php */
 	/* Location: ./system/app/libraries/phpthumb_lib.php */
-?>

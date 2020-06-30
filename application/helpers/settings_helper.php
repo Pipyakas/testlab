@@ -1,8 +1,9 @@
 <?php
-$CI =& get_instance();
+$CI = &get_instance();
 $CI->load->helper('utils');
 $CI->load->helper('file');
-function getSettings($file){
+function getSettings($file)
+{
 	return object_2_array(json_decode(read_file($file, true)));
 }
 
@@ -10,50 +11,51 @@ function getSettings($file){
 /*reset mail*/
 $settings = array();
 $settings = getSettings(EMAIL_SETTING_FILE);
-if(!$settings){ 
+if (!$settings) {
 	resetEmail();
 }
 
 $settings = getSettings(CONTACT_INFO_SETTING_FILE);
-if(!$settings){ 
+if (!$settings) {
 	resetContactInfo();
 }
 
 $settings = getSettings(GENERAL_SETTING_FILE);
-if(!$settings){ 
+if (!$settings) {
 	resetGeneral();
 }
 
 $settings = getSettings(CURRENCY_SETTING_FILE);
-if(!$settings){ 
+if (!$settings) {
 	resetCurrency();
 }
 
 
 $settings = getSettings(DEFAULT_LOCATION_FILE);
-if(!$settings){ 
+if (!$settings) {
 	resetDefaultLocation();
 }
 
 
 $settings = getSettings(PAYPAL_FILE);
-if(!$settings){ 
+if (!$settings) {
 	resetPaypal();
 }
 
 
-function resetGeneral(){
+function resetGeneral()
+{
 	/*Email settings*/
-	$settings['title']='Lrandomdev.com';
-	$settings['video_link']='';
+	$settings['title'] = 'Lrandomdev.com';
+	$settings['video_link'] = '';
 	$settings['facebook_fanpage']        = 'https://www.facebook.com/pages/LrandomDev/541746319279638?ref=hl';
-	$settings['twitter']='https://twitter.com/lrandomdev';
-	$settings['google_plus']='https://plus.google.com/u/1/116074713175395496992/posts';
-	$settings['pinterest']='http://www.pinterest.com/lrandomDev';
-	$settings['copyright']='&copy; Copyright 2013 by LrandomDev. All rights reserved.';
-	$settings['desc']='Sell code, lrandomdev.com, buil app, build website';
-	$settings['author']='LrandomDev.com';
-	$settings['keyword']='Sell code, lrandomdev.com, buil app, build website';
+	$settings['twitter'] = 'https://twitter.com/lrandomdev';
+	$settings['google_plus'] = 'https://plus.google.com/u/1/116074713175395496992/posts';
+	$settings['pinterest'] = 'http://www.pinterest.com/lrandomDev';
+	$settings['copyright'] = '&copy; Copyright 2013 by LrandomDev. All rights reserved.';
+	$settings['desc'] = 'Sell code, lrandomdev.com, buil app, build website';
+	$settings['author'] = 'LrandomDev.com';
+	$settings['keyword'] = 'Sell code, lrandomdev.com, buil app, build website';
 	$settings['ga_code']        = "<script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -62,12 +64,13 @@ function resetGeneral(){
 ga('create', 'UA-52513640-1', 'auto');
 ga('send', 'pageview');
 </script>";
-$settings['logo']="";
-$settings['favicon']="";
-resetSettings($settings,GENERAL_SETTING_FILE);
+	$settings['logo'] = "";
+	$settings['favicon'] = "";
+	resetSettings($settings, GENERAL_SETTING_FILE);
 }
 
-function resetEmail(){
+function resetEmail()
+{
 	/*Email settings*/
 	$settings['useragent']        = 'PHPMailer';              // Mail engine switcher: 'CodeIgniter' or 'PHPMailer'
 	$settings['protocol']         = 'smtp';                   // 'mail', 'sendmail', or 'smtp'
@@ -93,51 +96,57 @@ function resetEmail(){
 	$settings['mailpath']         = '';
 
 	/*end email settings*/
-	resetSettings($settings,EMAIL_SETTING_FILE);
+	resetSettings($settings, EMAIL_SETTING_FILE);
 }
 
-function resetContactInfo(){
+function resetContactInfo()
+{
 	/*Email settings*/
 	$settings['email']         = 'demo@lrandomdev.com';
-	$settings['phone']='012345678';
-	$settings['fax']='012345678';
-	$settings['skype']='lrandomdev';
-	$settings['yahoo']='lrandomdev';
-	$settings['address']='to 32, khu 4a, phuong Ha Phong <br> Ha Long , Quang Ninh';
-	$settings['company']='Lrandomdev.com';
+	$settings['phone'] = '012345678';
+	$settings['fax'] = '012345678';
+	$settings['skype'] = 'lrandomdev';
+	$settings['yahoo'] = 'lrandomdev';
+	$settings['address'] = 'to 32, khu 4a, phuong Ha Phong <br> Ha Long , Quang Ninh';
+	$settings['company'] = 'Lrandomdev.com';
 	/*end email settings*/
-	resetSettings($settings,CONTACT_INFO_SETTING_FILE);
+	resetSettings($settings, CONTACT_INFO_SETTING_FILE);
 }
 
 
-function resetCurrency(){
+function resetCurrency()
+{
 	$settings['position']  =  CURRENCY_SYMBOL_BEFORE;
-	$settings['currency_symbol']='$';
-	$settings['currency_id']=227;
-	resetSettings($settings,CURRENCY_SETTING_FILE);
+	$settings['currency_symbol'] = '$';
+	$settings['currency_id'] = 227;
+	resetSettings($settings, CURRENCY_SETTING_FILE);
 }
 
-function resetDefaultLocation(){
+function resetDefaultLocation()
+{
 	$settings['lat']  =  0;
 	$settings['lng'] = 0;
-	resetSettings($settings,DEFAULT_LOCATION_FILE);
+	resetSettings($settings, DEFAULT_LOCATION_FILE);
 }
 
-function resetSettings($settings,$file){
+function resetSettings($settings, $file)
+{
 	$json = json_encode($settings);
 	write_file($file, $json);
 }
 
 
-function setSettings($settings,$file){
-	$json=json_encode($settings);
-	write_file($file,$json);
+function setSettings($settings, $file)
+{
+	$json = json_encode($settings);
+	write_file($file, $json);
 }
 
-function resetPaypal(){
+function resetPaypal()
+{
 	$settings['username']  =  '';
 	$settings['pwd'] = '';
-	$settings['signature']='';
-	$settings['is_test']='true';
-	resetSettings($settings,PAYPAL_FILE);	
+	$settings['signature'] = '';
+	$settings['is_test'] = 'true';
+	resetSettings($settings, PAYPAL_FILE);
 }

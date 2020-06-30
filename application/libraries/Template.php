@@ -794,4 +794,3 @@ class Template
 }
 
 // END Template class
-?>

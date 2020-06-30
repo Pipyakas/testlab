@@ -5,18 +5,21 @@ class Tests_topic_model extends CI_Model
 	{
 		parent::__construct();
 	}
+	
 	function insert($data)
 	{
 		$data['created_at'] = date('Y-m-d H:i:s');
 		$this->db->insert('tests_topic', $data);
 		return $this->db->insert_id();
 	}
+
 	function update($data_array, $array_where)
 	{
 		$data_array['updated_at'] = date('Y-m-d H:i:s');
 		$this->db->where($array_where);
 		return $this->db->update('tests_topic', $data_array);
 	}
+
 	function get_by_id($id)
 	{
 		$select = '*';
@@ -25,6 +28,7 @@ class Tests_topic_model extends CI_Model
 		$order_by = array();
 		return $this->get($select, $array_where, $array_like, $order_by);
 	}
+
 	function get_by_types_id($types_id)
 	{
 		$select = '*';
@@ -34,6 +38,7 @@ class Tests_topic_model extends CI_Model
 		$order_by = array();
 		return $this->get($select, $where, $like, $order_by);
 	}
+
 	function get_by_owner_id($id)
 	{
 		$select = '*';
@@ -42,6 +47,7 @@ class Tests_topic_model extends CI_Model
 		$order_by = array();
 		return $this->get($select, $array_where, $array_like, $order_by);
 	}
+
 	function get($select = "*", $array_where = false, $array_like = false, $first = false, $offset = false, $order_by = false)
 	{
 		$data = array();
@@ -74,6 +80,7 @@ class Tests_topic_model extends CI_Model
 			return null;
 		}
 	}
+	
 	function total($like, $where)
 	{
 		$select = '*';

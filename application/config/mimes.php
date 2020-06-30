@@ -103,6 +103,5 @@ $mimes = array(
 	'json'  => array('application/json', 'text/json')
 );
 
-
 /* End of file mimes.php */
 /* Location: ./application/config/mimes.php */

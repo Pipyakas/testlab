@@ -23,7 +23,7 @@
           <a href="#" class="dropdown-toggle col-sm-1 col-xs-4" style="float:right" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Menu</a>
           <ul class="dropdown-menu pull-right" aria-labelledby="dropdownMenu1">
             <?php if (isset($_SESSION['user'])) { ?>
-              <li><a href="<?php echo base_url() . 'index.php/add_news' ?>" style="color:black;">Create news post</a></li>
+              <li><a href="<?php echo base_url() . 'index.php/add_news' ?>" style="color:black;">Create lesson</a></li>
               <li><a href="<?php echo base_url() . 'index.php/update-user' ?>" style="color:black;">Update user profile</a></li>
               <li><a href="<?php echo base_url() . 'index.php/logout' ?>" style="color:black;"><?php echo lang('msg_logout'); ?></a></li>
             <?php } else { ?>

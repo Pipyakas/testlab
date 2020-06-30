@@ -23,6 +23,7 @@ class Crawl extends MY_Controller
 		$data['stocks'] = $this->stock_model->get($select, $array_where, $array_like, 0, 1000, $order_by);
 		$this->render_frontend_tp('frontends/stock/stocks', $data);
 	}
+	
 	function update_price($stock_id, $price, $change)
 	{
 		$this->load->model('stock_model');

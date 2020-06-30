@@ -83,12 +83,14 @@ class Friends extends MY_Controller
       redirect(base_url());
     }
   }
+  
   function chat_room()
   {
     $id = 1;
     $data['livecodes'] = $this->livecodes_model->get_livecodes_by_id($id);
     $this->render_frontend_tp('frontends/chat/chatroom', $data);
   }
+
   function load_friends()
   {
     if (isset($_SESSION['user'])) {

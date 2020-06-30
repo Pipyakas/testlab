@@ -6,12 +6,14 @@ class top_slider_model extends CI_model
 		$this->db->insert('top_slider', $data);
 		return $this->db->insert_id();
 	}
+
 	function update($data, $where)
 	{
 		$data['updated_at'] = date('Y-m-d H:i:s');
 		$this->db->where($where);
 		return $this->db->update('top_slider', $data);
 	}
+	
 	function get($select = "*", $array_where = false, $array_like = false, $first = false, $offset = false, $order_by = false)
 	{
 		//  echo "load";

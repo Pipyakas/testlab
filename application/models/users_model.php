@@ -12,6 +12,7 @@ class Users_model extends CI_Model
 	{
 		parent::__construct();
 	}
+
 	function get($select = "*", $where = false, $like = false, $first = false, $offset = false, $order_by = false)
 	{
 		$data = array();
@@ -51,6 +52,7 @@ class Users_model extends CI_Model
 		$data_array['updated_at'] = date('Y-m-d H:i:s');
 		return $this->db->update('users', $data_array);
 	}
+
 	function insert($data_array)
 	{
 
@@ -58,6 +60,7 @@ class Users_model extends CI_Model
 		$data_array['activated'] = 1;
 		return $this->db->insert('users', $data_array);
 	}
+
 	function get_by_username_and_pwd($username, $pwd)
 	{
 		$select = '*';
@@ -66,6 +69,7 @@ class Users_model extends CI_Model
 		$order_by = array();
 		return $this->get($select, $where, $like, 0, 1, $order_by);   //đọc bằng hàm get ở trên
 	}
+
 	function get_by_username($username)
 	{
 		$select = '*';
@@ -74,6 +78,7 @@ class Users_model extends CI_Model
 		$order_by = array();
 		return $this->get($select, $where, $like, 0, 1, $order_by);   //đọc bằng hàm get ở trên
 	}
+
 	function get_by_user_id($user_id)
 	{
 		$select = '*';
@@ -90,6 +95,7 @@ class Users_model extends CI_Model
 
 		return $this -> get($select, $where, $like,$order_by);
 	}*/
+	
 	function total($where, $like)
 	{
 		$this->db->select('count(*) as total');

@@ -19,7 +19,7 @@ class Results_model extends CI_model
 			return $result[0]->answer;
 		} else return null;
 	}
-	
+
 	function get($select = "*", $array_where = false, $first = false, $offset = false, $order_by = false)
 	{
 		if ($order_by != false) {
