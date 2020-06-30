@@ -40,11 +40,11 @@
            </div>
          </div>
        </div>
-
      <?php
       }; //end of foreach $test_topic
       ?>
    </div>
+
    <style>
      .edit {}
 

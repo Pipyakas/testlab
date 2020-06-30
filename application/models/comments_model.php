@@ -115,7 +115,7 @@ class Comments_model extends CI_Model
 			return null;
 		}
 	}
-	
+
 	function total($like, $where)
 	{
 		$select = '*';

@@ -1,4 +1,4 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>statics/js/growl/jquery.growl.js"></script>
 <script src="<?php echo base_url(); ?>statics/js/jquery_upload/js/vendor/jquery.ui.widget.js"></script>
 <script src="<?php echo base_url(); ?>statics/js/jquery_upload/js/jquery.iframe-transport.js"></script>
@@ -11,6 +11,7 @@
 <script>
   jQuery(document).ready(function($) {
     $('#form').validate({
+
       submitHandler: function() {
         // alert("submited!!!");
         //    tinyMCE.triggerSave();// sua loi submit hai lan
@@ -82,10 +83,12 @@
 <div id="content" class="store-page">
   <!-- <div class="container"  style="margin:0px;padding:5px;"> -->
   <div class="container">
+
     <!-- <div class="core col-md-12"> -->
     <div class="col-md-12 col-xs-12" style="margin:0px;padding:0px;">
       <div class="row">
-        <div class="col-sm-6 col-xs-12" style="padding:0px;">
+
+        <div class="col-sm-5 col-xs-12" style="padding:0px;">
           <!--  <div class="form-group">-->
           <div>
             <div class="form-wraper" style="text-align: center">
@@ -110,6 +113,7 @@
                                                     } else {
                                                       echo '""';
                                                     } ?>" />
+
             <div id="webRTC" class="col-sm-12" style="margin:0px;padding-left:10px;">
               <div class="flex-chat">
                 <ul id="comment"></ul>
@@ -123,21 +127,24 @@
           <!--     </div>
         </div>     -->
         </div>
-        <div class="main-content col-sm-6 col-xs-12" style="padding-right:0px;">
+        <div class="main-content col-sm-7 col-xs-12" style="padding-right:0px;">
           <!--   <div class="form-group"> -->
           <div>
             <div class="form-wraper" style="text-align: center">
               <h1>Lessons</h1>
             </div>
+
           </div>
           <div class="inner-content">
+
           </div>
         </div>
+
+
       </div>
     </div>
   </div>
 </div>
-
 <style>
   #comment {
     background: #ddd;
@@ -147,7 +154,6 @@
     height: 200px;
     overflow: auto;
     border: 1px solid #BDBDBD;
-
   }
 
   #comment_input {
@@ -155,7 +161,6 @@
     padding: 0px;
     margin: 0px;
     height: 20px;
-
   }
 
   #comment_input input {
@@ -165,8 +170,6 @@
     padding: 0px;
     overflow: auto;
     margin: 0px;
-
-
   }
 
   #comment_input button {
@@ -175,10 +178,7 @@
     border: 1px solid gray;
     padding: 0px;
     margin: 0px;
-
   }
-
-
 
   #messages {
     background: #ddd;
@@ -188,7 +188,6 @@
     height: 200px;
     overflow: auto;
     border: 1px solid #BDBDBD;
-
   }
 
   #comment li {
@@ -229,12 +228,10 @@
     flex-direction: row;
   }
 
-
   .navbar-toggle .icon-bar {
     background-color: green;
   }
 </style>
-
 
 <script>
   function check_key(e) {
@@ -252,10 +249,6 @@
       element.attachEvent('on' + eventName, eventHandler);
     }
   }
-
-
-
-
 
   // Send random messge data on every button click
   bindEvent(comment_button, 'click', function(e) {

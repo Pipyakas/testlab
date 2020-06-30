@@ -73,15 +73,11 @@ class Products extends MY_Controller
 
 	function load_news_by_user_id()
 	{
-
-
 		$user_id = $_GET['user_id'];
 		$data['news'] = $this->news_model->get_by_user_id($user_id);
-
-
 		$this->load->library('utils');
 		if ($data['news'] != null) {
-			$this->utils->_load_view('frontends/product/news5', $data);
+			$this->utils->_load_view('frontends/product/newslite', $data);
 		} else {
 			$this->utils->_load_view();
 		}
@@ -89,7 +85,6 @@ class Products extends MY_Controller
 
 	function edit_apply()
 	{
-
 		if (isset($_POST['id'])) {
 
 			$id = $_POST['id'];
@@ -99,7 +94,6 @@ class Products extends MY_Controller
 			<script>
 				alert("Edit".<?php echo $content; ?>);
 			</script>
-
 <?php
 			$data_array = array(
 				'title' => $title,
@@ -117,7 +111,6 @@ class Products extends MY_Controller
 			$this->news_model->update($data_array, array('id' => $id));
 
 			if (!empty($_FILES['pic']['tmp_name'])) {
-
 				$filename = $_FILES['pic']['name'];
 				$_FILES['pic']['name'] = rename_upload_file($filename);
 				$dir = create_dir_upload('uploads/avts/');
@@ -151,7 +144,6 @@ class Products extends MY_Controller
 					$this->news_model->update(array('avt' => $dir . '/' . $_FILES['pic']['name']), array('id' => $id));
 				}
 			}
-
 			echo json_encode(array('ok' => 1));
 		} else {
 			echo json_encode(array('ok' => 0));

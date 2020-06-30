@@ -14,13 +14,6 @@ require get_theme_folder() . 'custom_validation.php';
 <!--
 <script type="text/javascript" src="<?php echo base_url(); ?>statics/js/colorbox/jquery.colorbox-min.js"></script>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>/statics/js/colorbox/colorbox.css"/>
-
-
-
-
-
-
-
 -->
 <script>
   jQuery(document).ready(function($) {
@@ -32,7 +25,7 @@ require get_theme_folder() . 'custom_validation.php';
       },
       submitHandler: function() {
         // alert("submited!!!");
-        tinyMCE.triggerSave(); // sua loi submit hai lan
+        tinyMCE.triggerSave();
         pass_data = $('#form').serialize();
         $.ajax({
             url: '<?php echo base_url() ?>index.php/testlab/products/edit_apply',
@@ -56,14 +49,12 @@ require get_theme_folder() . 'custom_validation.php';
                 message: '<?php echo lang('edit_successfully') ?>'
               });
             }
-
             if (data.ok == 0) {
               //   alert("ok=0!!!");
               //need login to cotinue;
               window.location.href = "<?php echo base_url() . 'admin/dashboard/login'; ?>"
             }
           })
-
       }
     });
 
@@ -103,6 +94,7 @@ require get_theme_folder() . 'custom_validation.php';
 
   });
 </script>
+
 <div class="container">
   <div class="form-wraper">
     <div class="item col-xs-offset-2">
@@ -111,7 +103,6 @@ require get_theme_folder() . 'custom_validation.php';
     <form class="form-horizontal" id="form" name="form" method="post" enctype="multipart/form-data">
       <input type="hidden" name="id" value="<?php echo $object->id; ?>" />
       <fieldset>
-
         <div class="form-group">
           <div class="col-sm-2">
             <label class="control-label"><?php echo lang('msg_title'); ?></label>
@@ -122,10 +113,9 @@ require get_theme_folder() . 'custom_validation.php';
         </div>
         <div class="form-group ">
           <div class="col-sm-2">
-            <label class="control-label"><?php echo lang('msg_add_avt'); ?></label>
+            <label class="control-label"><?php echo lang('msg_avatar'); ?></label>
           </div>
           <div class="col-sm-8 ">
-
             <input type="file" class="form-control" id="fudPhoto" name="fileData" class="fudFile" multiple="true" />
           </div>
         </div>
@@ -149,15 +139,12 @@ require get_theme_folder() . 'custom_validation.php';
             $types_array = explode(',', $types);
             foreach ($list_types as $key) {
               $display = 0;
-
               foreach ($types_array as $id) if ($key->id == $id) {
-
                 echo '<div class="checkbox">
                       <label>
                          <input  checked="checked"';
                 echo ' type="checkbox" class="types" name="types[]" value="' . $id . '">' . $key->name . '
                       </label>';
-
                 echo '</div>';
                 $display = 1;
               }
@@ -169,13 +156,9 @@ require get_theme_folder() . 'custom_validation.php';
                             </div>';
               }
             }
-
             ?>
-
-
           </div>
         </div>
-
         <div class="form-group">
           <div class="col-sm-2 col-xs-offset-2">
             <button type="submit" class="btn btn-success"><?php echo lang('msg_edit'); ?></button>
@@ -183,12 +166,7 @@ require get_theme_folder() . 'custom_validation.php';
         </div>
       </fieldset>
     </form>
-
-
-
   </div>
-
-
 </div>
 
 
@@ -217,7 +195,6 @@ require get_theme_folder() . 'custom_validation.php';
       "save table contextmenu directionality emoticons template paste textcolor"
 
     ],
-
 
     toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons",
     style_formats: [

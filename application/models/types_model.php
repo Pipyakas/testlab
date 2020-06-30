@@ -5,6 +5,7 @@ class Types_model extends CI_model
 	{
 		parent::__construct();
 	}
+
 	function get($select = "*", $where = false, $like = false, $first = false, $offset = false, $order_by = false)
 	{
 		$data = array();
@@ -38,6 +39,7 @@ class Types_model extends CI_model
 			return null;
 		}
 	}
+
 	function get_by_top()
 	{
 		$select = "*";

@@ -111,7 +111,7 @@ jQuery(document).ready(function() {
               <label>Result</label>
             </div>
             <div class="col-sm-3">
-              <input class="form-control" name="recommend[]" value="">
+              <input class="form-control" name="result[]" value="">
             </div>
           </div>
         </div>

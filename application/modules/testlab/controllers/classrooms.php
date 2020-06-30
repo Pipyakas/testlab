@@ -128,7 +128,7 @@ class classrooms extends MY_Controller
 				$data = array(
 					'question_id' => $question_id,
 					'selection' => $_POST['option'][$i],
-					'recommend' => $_POST['recommend'][$i]
+					'result' => $_POST['result'][$i]
 				);
 				$this->answer_model->insert($data);
 			}
@@ -205,7 +205,7 @@ class classrooms extends MY_Controller
 				$data = array(
 					'question_id' => $question_id,
 					'selection' => $_POST['option'][$i],
-					'recommend' => $_POST['recommend'][$i]
+					'result' => $_POST['result'][$i]
 				);
 				$answer_id = array("id" => $_POST['answer_id'][$i]);
 				$this->answer_model->update($data, $answer_id);
@@ -446,7 +446,7 @@ class classrooms extends MY_Controller
 			$content = $_POST['content_main'];
 ?>
 			<script>
-				alert("Hung".<?php echo $content; ?>);
+				alert("Edit".<?php echo $content; ?>);
 			</script>
 
 <?php

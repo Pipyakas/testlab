@@ -5,8 +5,8 @@ if (isset($news) && $news != null) {
         $this->load->model('users_model');
         $author = $this->users_model->get_by_user_id($key->user_id);
 ?>
-        <div id="content" class="container">
-            <div class="core col-md-10 col-md-offset-1">
+        <div id="content">
+            <div class="col-md-12" style="padding:0px;margin:0px;">
                 <div class="item-news">
                     <div class="row">
                         <div id="newslist">
@@ -35,6 +35,7 @@ if (isset($news) && $news != null) {
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -47,44 +48,12 @@ if (isset($news) && $news != null) {
             }
 
             .img-fluid {
-                height: 150px;
+                height: 180px;
                 width: 100%;
                 object-fit: cover;
             }
         </style>
-
-        <script type="text/javascript">
-            function check_login() {
-
-                myvar = '<?php if (isset($_SESSION['user'])) {
-                                echo $_SESSION['user'][0]->id;
-                            } else {
-                                echo "";
-                            };
-                            ?>';
-                if (myvar == '') {
-                    alert("please login to continue");
-                    return false;
-                } else {
-
-
-                    return true;
-                }
-            };
-        </script>
-
-    <?php
-    };
-    ?>
-    <div class="container ">
-        <div class="col-md-10 col-md-offset-1">
-            <?php
-            if (isset($page_link)) {
-                echo $page_link;
-            };
-            ?>
-        </div>
-    </div>
 <?php
+    };
 }
 ?>

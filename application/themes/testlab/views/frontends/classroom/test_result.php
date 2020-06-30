@@ -41,14 +41,14 @@
                         $array_selected = explode(',', $selected);
                 ?>
                         <div class="row">
-                            <div class="container">
+                            <div class="container col-sm-12">
                                 <?php if (in_array($option->id, $array_selected)) {
                                 ?>
-                                    <div class="col-sm-5">
+                                    <div class="col-sm-3">
                                         <input type="checkbox" checked value="<?php echo $option->selection; ?>"><?php echo $option->selection; ?>
                                     </div>
-                                    <div class="col-sm-5">
-                                        <h3><?php echo $option->recommend; ?></h3>
+                                    <div class="col-sm-6">
+                                        <h3><?php echo $option->result; ?></h3>
                                     </div>
                                 <?php
                                 } else {

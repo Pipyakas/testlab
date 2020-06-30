@@ -11,6 +11,7 @@
           <ul class="nav navbar-nav">
             <li class="active"><a class="navbar-brand" href="<?php echo base_url() ?>index.php/homepage">Home</a></li>
             <?php if (isset($_SESSION['user'])) { ?>
+              <li class="active"><a class="navbar-brand" href="<?php echo base_url() ?>index.php/classroom?id=<?php echo $_SESSION['user'][0]->id ?>">Classroom</a></li>
               <li class="active"><a class="navbar-brand" href="<?php echo base_url() ?>index.php/test?id=<?php echo $_SESSION['user'][0]->id ?>">Test</a></li>
             <?php } ?>
           </ul>
@@ -19,10 +20,10 @@
           <form action="<?php echo base_url() . 'index.php/search' ?>" class="center col-sm-11" type="POST" enctype="multipart/form-data">
             <input type="text" class="col-sm-10 col-xs-8" name="key"></input>
           </form>
-          <a href="#" class="dropdown-toggle col-sm-1 col-xs-4" style="float:right" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Admin</a>
+          <a href="#" class="dropdown-toggle col-sm-1 col-xs-4" style="float:right" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Menu</a>
           <ul class="dropdown-menu pull-right" aria-labelledby="dropdownMenu1">
             <?php if (isset($_SESSION['user'])) { ?>
-              <li><a href="<?php echo base_url() . 'index.php/post-news' ?>" style="color:black;">Create news post</a></li>
+              <li><a href="<?php echo base_url() . 'index.php/add_news' ?>" style="color:black;">Create news post</a></li>
               <li><a href="<?php echo base_url() . 'index.php/update-user' ?>" style="color:black;">Update user profile</a></li>
               <li><a href="<?php echo base_url() . 'index.php/logout' ?>" style="color:black;"><?php echo lang('msg_logout'); ?></a></li>
             <?php } else { ?>

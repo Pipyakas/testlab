@@ -94,7 +94,7 @@ class friends_model extends CI_Model
 		$order_by = array();
 		return $this->get($select, $where, $like, $order_by);
 	}
-	
+
 	function total($where, $like)
 	{
 		$this->db->select('count(*) as total');

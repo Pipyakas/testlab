@@ -173,12 +173,6 @@ $lang['msg_mark_read']='Mark As Read';
 $lang['is_read']='is read';
 $lang['msg_yes']='Yes';
 $lang['msg_no']='No';
-
-
-
-
-
-
 $lang['msg_lastest_contact']='Lastest Contact';
 $lang['msg_userful_link']='Userful Link';
 $lang['msg_pages']='Pages';

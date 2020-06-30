@@ -7,7 +7,7 @@
       <fieldset>
         <div class="form-group ">
           <div class="col-sm-2">
-            <label class="control-label"><?php echo lang('msg_add_avt'); ?></label>
+            <label class="control-label"><?php echo lang('msg_avatar'); ?></label>
           </div>
           <div class="col-sm-8 ">
             <input type="file" class="form-control" name="pic" id="pic">

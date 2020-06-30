@@ -124,10 +124,10 @@ if ($question != null) {
                 <input class="form-control" name="option[]" value="<?php echo $answer[$i]->selection; ?>">
               </div>
               <div class="col-sm-1 control-label">
-                <label>Recommend</label>
+                <label>result</label>
               </div>
               <div class="col-sm-3">
-                <input class="form-control" name="recommend[]" value="<?php echo $answer[$i]->recommend; ?>">
+                <input class="form-control" name="result[]" value="<?php echo $answer[$i]->result; ?>">
               </div>
             </div>
           </div>
